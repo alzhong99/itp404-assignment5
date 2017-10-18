@@ -1,5 +1,6 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<h1 class="p-2">Subreddit Search</h1>
+
+{{input class="w-75 m-2" type="text" value=subreddit}}
+<button onclick={{action "searchSubreddit"}}>Search</button>
 
 {{outlet}}
