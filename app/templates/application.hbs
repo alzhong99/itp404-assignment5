@@ -1,6 +1,8 @@
 <h1 class="p-2">Subreddit Search</h1>
 
-{{input class="w-75 m-2" type="text" value=subreddit}}
-<button onclick={{action "searchSubreddit"}}>Search</button>
+<form onsubmit={{action "searchSubreddit"}}>
+  {{input class="w-75 m-2" type="text" value=subreddit}}
+  <button type="submit">Search</button>
+</form>
 
 {{outlet}}

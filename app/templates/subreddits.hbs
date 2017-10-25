@@ -1,16 +1,24 @@
-{{#each model.data.children as |post|}}
+{{#each model as |post|}}
   <div class='content post border'>
-    <h4 class='d-inline-block'>
-      <a href={{post.data.url}}>
-        {{post.data.title}}
-      </a>
-    </h4>
-    <h6 class='font-italic text-secondary d-inline-block'>{{post.data.domain}}</h6>
-    <ul>
-      <li class='details'>Ups: {{post.data.ups}}</li>
-      <li class='details'>Downs: {{post.data.downs}}</li>
-      <li class='details'>Comments: {{post.data.num_comments}}</li>
-    </ul>
+
+    {{#if post.data.thumbnail}}
+      <img class='d-inline-block mr-3' src={{post.data.thumbnail}} />
+    {{else}}
+      <img class='d-inline-block mr-3' src='https://start.me/favicon/www.reddit.com' />
+    {{/if}}
+    <div class='post-text d-inline-block border'>
+      <h4 class='d-inline-block'>
+        <a href={{post.data.url}}>
+          {{post.data.title}}
+        </a>
+      </h4>
+      <h6 class='font-italic text-secondary d-inline-block'>{{post.data.domain}}</h6>
+      <ul>
+        <li class='details'>Ups: {{post.data.ups}}</li>
+        <li class='details'>Downs: {{post.data.downs}}</li>
+        <li class='details'>Comments: {{post.data.num_comments}}</li>
+      </ul>
+    </div>
   </div>
 {{/each}}
 

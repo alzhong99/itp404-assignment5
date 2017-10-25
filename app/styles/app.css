@@ -1,3 +1,6 @@
+.post-text {
+  max-width: 85%;
+}
 .content {
   border-radius: 0 20px;
   margin: 20px 8px;
@@ -27,6 +30,11 @@
   -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
+
+ul {
+  padding-left: 10px;
+}
+
 @-webkit-keyframes load4 {
   0%,
   100% {
