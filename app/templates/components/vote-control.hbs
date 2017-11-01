@@ -1,0 +1,13 @@
+<div>
+  {{#if uppable}}
+    <h3><i class="fa fa-angle-up arrow" onclick={{action 'up'}}></i></h3>
+  {{else}}
+    <h3><i class="fa fa-angle-up arrow disabled"></i></h3>
+  {{/if}}
+  <h3>{{score}}</h3>
+  {{#if downable}}
+    <h3><i class="fa fa-angle-down arrow" onclick={{action 'down'}}></i></h3>
+  {{else}}
+    <h3><i class="fa fa-angle-down arrow disabled"></i></h3>
+  {{/if}}
+</div>

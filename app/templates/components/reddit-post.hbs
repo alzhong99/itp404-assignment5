@@ -1,0 +1,46 @@
+<div class='content post border'>
+  <table>
+    <tr>
+      <!-- Vote Control -->
+      <td>
+        {{vote-control score=post.data.score onvote=(action 'changeScore')}}
+      </td>
+      <!-- Thumbnail -->
+      <td>
+        {{#if validThumbnail}}
+          <img class='mx-3' src={{post.data.thumbnail}} />
+        {{else}}
+          <img class='mx-3' src='https://start.me/favicon/www.reddit.com' />
+        {{/if}}
+      </td>
+      <!-- Post Info -->
+      <td>
+        <table>
+          <tr>
+            <!-- Title and Link -->
+            <td class="d-inline">
+              <h4 class="d-inline">
+                <a href={{post.data.url}}>{{post.data.title}}</a>
+              </h4>
+            </td>
+            <!-- Domain -->
+            <td class="d-inline">
+              <h6 class='font-italic text-secondary m-2 d-inline'>{{post.data.domain}}</h6>
+            </td>
+          </tr>
+          <tr>
+            <!-- Details -->
+            <td colspan=2>
+              <ul>
+                <li class='details'>{{relative-time post.data.created}}</li>
+                <li class='details'>Ups: {{post.data.ups}}</li>
+                <li class='details'>Downs: {{post.data.downs}}</li>
+                <li class='details'>Comments: {{post.data.num_comments}}</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
