@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('subreddits', {
     path: 'subreddits/:subreddit'
   });
+  this.route('playground');
 });
 
 export default Router;

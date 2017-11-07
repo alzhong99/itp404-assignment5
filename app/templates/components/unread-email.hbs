@@ -1,0 +1,5 @@
+{{#if email.read}}
+  <p>{{email.title}}</p>
+{{else}}
+  <p onclick={{action "read"}}><strong>{{email.title}}</strong></p>
+{{/if}}
